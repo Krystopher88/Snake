@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #9bee00;
+}
+
+h2{
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+.contentDisplay{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+canvas {
+    display: block;
+    width: calc(100% - 5%);
+    height: calc(100% - 10%);
+    border: 4px solid #001100;
+    margin: auto;
+    background-color: #9bee00;
+}
