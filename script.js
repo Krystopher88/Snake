@@ -99,13 +99,28 @@ function generateFoodPosition() {
 
 function updateScore() {
   document.querySelector('.scoreDisplay').textContent = formatScore(score);
+  updateGameSpeed();
 }
 
 function formatScore(score) {
   return String(score).padStart(4, '0');
 }
 
-let game = setInterval(draw, 100);
+let baseSpeed = 180;
+let speedIncrement = 10;
+let speedIncreaseInterval = 5;
+
+let gameSpeed = baseSpeed;
+
+function updateGameSpeed() {
+  if (score % speedIncreaseInterval === 0 && score !== 0) {
+    gameSpeed -= speedIncrement;
+    clearInterval(game);
+    game = setInterval(draw, gameSpeed);
+  }
+}
+
+let game = setInterval(draw, gameSpeed);
 
 window.addEventListener('resize', () => {
   canvas.width = window.innerWidth * 0.9;
