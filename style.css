@@ -17,6 +17,10 @@ h2{
     margin: 1rem;
 }
 
+.newGame{
+    cursor: pointer;
+}
+
 .contentDisplay{
     display: flex;
     align-items: center;

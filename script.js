@@ -151,3 +151,6 @@ function endGame() {
 }
 
 document.addEventListener("keydown", startGame);
+document.querySelector('.newGame').addEventListener('click', () => {
+  location.reload();
+});
